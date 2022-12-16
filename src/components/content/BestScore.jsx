@@ -1,5 +1,5 @@
 import { Card } from "@mui/material";
-import { getAll } from "../../utils/EndGameRequest";
+import { getSession } from "../../utils/EndGameRequest";
 import { useEffect, useState } from "react";
 const BASE_URL = process.env.REACT_APP_API_KEY;
 //
@@ -9,7 +9,7 @@ function Customer(props) {
 
   const updateHighScore = async () => {
     //Get the score and time
-    const { data } = await getAll(BASE_URL + "/sessions");
+    const { data } = await getSession(BASE_URL + "/sessions");
     setHighScore(data.sessions[0].score);
     setBestTime(data.sessions[0].time);
   };

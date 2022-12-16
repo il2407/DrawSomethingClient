@@ -2,6 +2,7 @@ import NaviButton from "./NaviButton";
 import { Box } from "@mui/material";
 
 function EndGameBox(props) {
+  
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>Your Score is : {props.score}</Box>
@@ -11,5 +12,6 @@ function EndGameBox(props) {
     </>
   );
 }
+
 
 export default EndGameBox;
