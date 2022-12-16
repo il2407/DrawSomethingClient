@@ -2,7 +2,7 @@ import { Card } from "@mui/material";
 import { getAll } from "../../utils/EndGameRequest";
 import { useEffect, useState } from "react";
 const BASE_URL = process.env.REACT_APP_API_KEY;
-
+//
 function Customer(props) {
   const [highScore, setHighScore] = useState(0);
   const [bestTime, setBestTime] = useState(0);
