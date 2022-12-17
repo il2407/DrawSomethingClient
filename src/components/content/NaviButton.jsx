@@ -13,7 +13,6 @@ function NaviButton(props) {
   const BASE_URL = process.env.REACT_APP_API_KEY;
 
   const postData = async () => {
-    console.log("postData");
     await createGameData(
       BASE_URL + "/game-data/createGameData",
       "",
@@ -24,7 +23,6 @@ function NaviButton(props) {
   };
 
   const updateData = async (time, score) => {
-    console.log("updateData");
     if (props.name === "New Game") {
       await updateGameData(
         BASE_URL + "/game-data/gameData",

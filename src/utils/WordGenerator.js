@@ -2000,19 +2000,16 @@ function randInt(lessThan) {
 
 function randomWordByLength(length) {
   const word = generateWordWithLength(length);
-  console.log(word);
   return word;
 }
 
 function randomWordByRange(minLength, maxLength) {
   const word = generateWordWithRangeLength(minLength, maxLength);
-  console.log(word);
   return word;
 }
 
 function randomWordByMinLength(minLength) {
   const word = generateWordWithMinLength(minLength);
-  console.log(word);
   return word;
 }
 

@@ -16,7 +16,6 @@ export function EndGame() {
   const [time, setTime] = useState(0);
 
   const putData = async (prevScore, newScore, newTime) => {
-    console.log(prevScore, newScore, newTime);
     await updateSession(
       BASE_URL + "/sessions/" + parseInt(prevScore),
       parseInt(newScore),
