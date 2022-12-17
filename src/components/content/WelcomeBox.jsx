@@ -9,9 +9,7 @@ function WelcomeBox() {
     return (
 
         <Box className= "boxWrap" >
-          <h3 >Welcome View</h3>
-          <br></br>
-          
+          <h3 >Welcome View</h3>          
             <NaviButton  name="New Game" path="WordChoosing"></NaviButton>
             <NaviButton  name="Join Game" path="Drawing"></NaviButton>
             <BestScore></BestScore>
