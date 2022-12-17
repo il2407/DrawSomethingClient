@@ -4,7 +4,7 @@ import "./style.css";
 
 export function WordChoosing() {
   return (
-    <Box className="boxWrap">
+    <Box>
       <WordList />
     </Box>
   );

@@ -73,7 +73,7 @@ export function EndGame() {
   }, []);
 
   return (
-    <Box className="boxWrap">
+    <Box>
       <EndGameBox score={score} time={time}></EndGameBox>
     </Box>
   );

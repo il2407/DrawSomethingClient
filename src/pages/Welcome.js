@@ -9,7 +9,7 @@ export function Welcome() {
   }, []);
 
   return (
-    <Box className="boxWrap">
+    <Box>
       <WelcomeBox />
     </Box>
   );
