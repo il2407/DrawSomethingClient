@@ -8,6 +8,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import { EndGame } from "./pages/EndGame";
 import { AppWrap } from "./AppStyle";
+import { CloudWaveEffect } from "react-background-animation";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/Drawing" element={<Drawing />} />
           <Route path="/end-game" element={<EndGame />} />
         </Routes>{" "}
+        <CloudWaveEffect />
       </>
     </AppWrap>
   );
