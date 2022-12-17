@@ -1,15 +1,11 @@
-import { useAsyncValue, useNavigate } from "react-router-dom";
-import { Fab, getAlertTitleUtilityClass } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Fab } from "@mui/material";
+import { useState } from "react";
 import {
   getGameData,
   createGameData,
   updateGameData,
-} from "../../utils/gameDataUtils";
-// Custom component that gets:
-// Name of the Button
-// Path to navigate to
-// Type of the button
+} from "../../utils/gameDataRequest";
 
 function NaviButton(props) {
   let navigate = useNavigate();
