@@ -15,6 +15,7 @@ import {
   createGameData,
   updateGameData,
 } from "../utils/gameDataUtils";
+import NaviButton from "../components/content/NaviButton";
 
 const BASE_URL = process.env.REACT_APP_API_KEY;
 const socket = io.connect(BASE_URL);
@@ -180,7 +181,7 @@ export default function Drawing() {
           <br></br>
           <br></br>
           <span class="toto">
-            <span>==Wait for your friend to guess and draw!</span>{" "}
+            <span>Wait for your friend to guess and draw</span>{" "}
           </span>
         </Box>
       )}

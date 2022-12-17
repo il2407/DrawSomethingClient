@@ -14,7 +14,6 @@ import {
 function NaviButton(props) {
   let navigate = useNavigate();
   const [currPath, setCurrPath] = useState(`/${props.path}`);
-  const [isEmpty, setisEmpty] = useState(false);
   const BASE_URL = process.env.REACT_APP_API_KEY;
 
   const postData = async () => {
@@ -27,7 +26,7 @@ function NaviButton(props) {
       0
     );
   };
-  
+
   const updateData = async (time, score) => {
     console.log("updateData");
     if (props.name === "New Game") {
@@ -53,8 +52,14 @@ function NaviButton(props) {
     else updateData(Date.now(), 0);
   };
 
+  const joinGameManage = async () => {
+    window.sessionStorage.removeItem("player1");
+  };
+
   const handleOnClick = () => {
+    if (props.name === "Home Screen") navigate(currPath);
     if (props.name === "New Game") newDataManage();
+    else if (props.name === "Join Game") joinGameManage();
     else updateData();
     navigate(currPath);
   };
