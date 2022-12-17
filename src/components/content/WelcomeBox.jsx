@@ -12,6 +12,7 @@ function WelcomeBox() {
           <h3 >Welcome View</h3>          
             <NaviButton  name="New Game" path="WordChoosing"></NaviButton>
             <NaviButton  name="Join Game" path="Drawing"></NaviButton>
+            <>asdsadsadasd</>
             <BestScore></BestScore>
         </Box>
 
