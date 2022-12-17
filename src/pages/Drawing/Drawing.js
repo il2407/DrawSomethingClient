@@ -63,7 +63,6 @@ export default function Drawing() {
         data.gameDatas[0].time,
         scoreSum
       );
-      // localStorage.setItem("pointsSum", scoreSum);
       alert("Correct Word! ");
       navigate("/WordChoosing");
     } else alert("Wrong Word! Keep Trying");
@@ -90,13 +89,19 @@ export default function Drawing() {
 
   return (
     <Box>
+      {/* Whenever a draw data inserted by the other player 
+      the waiting view trigered to change the guessing view */}
       {saveData ? (
         <Box>
+          {/* A query which manages the turns between the main and secondary player
+              to see the drawing/guessing view (Accordingly) */}
           {sessionStorage.getItem("player1") ? (
             <div className="draw">
+              {/* Draw board  */}
               <Box className="boxWrap">
                 <CanvasDraw {...props} />
                 <Box class>
+                  {/* Buttons group */}
                   <div ref={paletteRef} className="picker-container">
                     <Box className="boxWrap">
                       <ButtonGroup
@@ -105,6 +110,7 @@ export default function Drawing() {
                         aria-label="Disabled elevation buttons"
                         color="success"
                       >
+                        {/* Color picking button */}
                         <Button
                           onClick={() => {
                             setShowColor((s) => !s);
@@ -115,7 +121,7 @@ export default function Drawing() {
                           </span>{" "}
                           color
                         </Button>
-
+                        {/* Undo button */}
                         <Button
                           onClick={() => {
                             canvasRef.current.undo();
@@ -135,12 +141,14 @@ export default function Drawing() {
                         aria-label="Disabled elevation buttons"
                         color="success"
                       >
+                        {/* Clear button */}
                         <Button onClick={handleClear}>
                           <span role="img" aria-label="">
                             💣
                           </span>{" "}
                           clear
                         </Button>
+                        {/* Send button */}
                         <Button onClick={handleOnClick}>
                           <span role="img" aria-label="">
                             🚀
@@ -167,6 +175,7 @@ export default function Drawing() {
             </div>
           ) : (
             <>
+              {/* Word guessing view */}
               <h1>Guess the word!</h1>
               <img src={saveData} alt="" />
               <Input
@@ -180,6 +189,7 @@ export default function Drawing() {
         </Box>
       ) : (
         <Box>
+          {/* Waiting view */}
           <br></br>
           <br></br>
           <br></br>

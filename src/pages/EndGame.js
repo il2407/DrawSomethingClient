@@ -23,6 +23,9 @@ export function EndGame() {
     );
   };
 
+  {
+    /* Comparing the current score and the best score */
+  }
   const updateHighScore = async () => {
     //Get the score and time
     const { data } = await getSession(BASE_URL + "/sessions");
