@@ -22,7 +22,7 @@ function NaviButton(props) {
     await createGameData(
       BASE_URL + "/game-data/createGameData",
       "",
-      performance.now(),
+      Date.now(),
       0,
       0
     );
@@ -50,7 +50,7 @@ function NaviButton(props) {
   const newDataManage = async () => {
     const { data } = await getGameData(BASE_URL + "/game-data");
     if (data.count === 0) postData();
-    else updateData(performance.now(), 0);
+    else updateData(Date.now(), 0);
   };
 
   const handleOnClick = () => {
