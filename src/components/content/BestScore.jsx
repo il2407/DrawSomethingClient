@@ -3,7 +3,7 @@ import { getSession } from "../../utils/EndGameRequest";
 import { useEffect, useState } from "react";
 const BASE_URL = process.env.REACT_APP_API_KEY;
 
-function Customer(props) {
+function BestScore(props) {
   const [highScore, setHighScore] = useState(0);
   const [bestTime, setBestTime] = useState(0);
 
@@ -30,4 +30,4 @@ function Customer(props) {
   );
 }
 
-export default Customer;
+export default BestScore;
